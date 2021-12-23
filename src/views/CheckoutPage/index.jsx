@@ -305,7 +305,7 @@ function CheckoutPage() {
                   height: 70,
                 }}
               >
-                <Link to="/">
+                <Link to="/" style={{ textDecoration: 'none' }}>
                   <Button
                     sx={{
                       width: 300,

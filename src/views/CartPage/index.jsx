@@ -189,7 +189,7 @@ const ProdukItem = () => {
           >
             <CartIcon sx={{ color: 'purple' }} />
           </Button>
-          <Link to="/detail-produk">
+          <Link to="/detail-produk" style={{ textDecoration: 'none' }}>
             <Button
               variant="outlined"
               sx={{
@@ -951,12 +951,13 @@ function CartPage() {
             }}
           >
             <Button
+              onClick={handleClose}
               variant="outlined"
               sx={{
                 backgroundColor: 'white',
                 color: 'black',
                 fontWeight: 'bold',
-                borderColor: 'black',
+                borderColor: 'magenta',
 
                 borderRadius: 2,
                 width: 250,
@@ -967,7 +968,7 @@ function CartPage() {
             >
               Batal
             </Button>
-            <Link to="/tagihan-page">
+            <Link to="/tagihan-page" style={{ textDecoration: 'none' }}>
               <Button
                 variant="outlined"
                 sx={{

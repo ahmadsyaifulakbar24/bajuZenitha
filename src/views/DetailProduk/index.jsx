@@ -191,7 +191,7 @@ const ProdukItem = () => {
           >
             <CartIcon sx={{ color: 'purple' }} />
           </Button>
-          <Link to="/detail-produk">
+          <Link to="/detail-produk" style={{ textDecoration: 'none' }}>
             <Button
               variant="outlined"
               sx={{
@@ -393,7 +393,18 @@ function DetailProduk() {
                   border: 1,
                   borderColor: 'purple',
                 }}
-              ></Box>
+              >
+                <CardMedia
+                  component="img"
+                  image="/assets/images/image 8.png"
+                  sx={{
+                    height: '100%',
+                    border: 1,
+                    borderColor: 'purple',
+                    borderRadius: 1,
+                  }}
+                />
+              </Box>
               <Box
                 sx={{
                   height: '23%',
@@ -402,7 +413,18 @@ function DetailProduk() {
                   border: 1,
                   borderColor: 'purple',
                 }}
-              ></Box>
+              >
+                <CardMedia
+                  component="img"
+                  image="/assets/images/image 8.png"
+                  sx={{
+                    height: '100%',
+                    border: 1,
+                    borderColor: 'purple',
+                    borderRadius: 1,
+                  }}
+                />
+              </Box>
               <Box
                 sx={{
                   height: '23%',
@@ -411,7 +433,18 @@ function DetailProduk() {
                   border: 1,
                   borderColor: 'purple',
                 }}
-              ></Box>
+              >
+                <CardMedia
+                  component="img"
+                  image="/assets/images/image 8.png"
+                  sx={{
+                    height: '100%',
+                    border: 1,
+                    borderColor: 'purple',
+                    borderRadius: 1,
+                  }}
+                />
+              </Box>
               <Box
                 sx={{
                   height: '23%',
@@ -420,7 +453,18 @@ function DetailProduk() {
                   border: 1,
                   borderColor: 'purple',
                 }}
-              ></Box>
+              >
+                <CardMedia
+                  component="img"
+                  image="/assets/images/image 8.png"
+                  sx={{
+                    height: '100%',
+                    border: 1,
+                    borderColor: 'purple',
+                    borderRadius: 1,
+                  }}
+                />
+              </Box>
             </Box>
 
             <Box
@@ -723,7 +767,7 @@ function DetailProduk() {
                       mt: 2,
                     }}
                   >
-                    <Link to="/cart-page">
+                    <Link to="/cart-page" style={{ textDecoration: 'none' }}>
                       <Button
                         variant="outlined"
                         sx={{
@@ -1185,7 +1229,9 @@ function DetailProduk() {
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-              <Typography sx={{ color: 'blue', fontSize: 20 }}>
+              <Typography
+                sx={{ color: 'blue', fontSize: 20, textAlign: 'justify' }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 in malesuada lorem. Nam iaculis lacinia ligula, ut faucibus mi
                 maximus quis. Vestibulum ante ipsum primis in faucibus orci
@@ -1206,7 +1252,9 @@ function DetailProduk() {
               </Typography>
             </TabPanel>
             <TabPanel value={value} index={1}>
-              <Typography sx={{ color: 'green', fontSize: 20 }}>
+              <Typography
+                sx={{ color: 'green', fontSize: 20, textAlign: 'justify' }}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 in malesuada lorem. Nam iaculis lacinia ligula, ut faucibus mi
                 maximus quis. Vestibulum ante ipsum primis in faucibus orci

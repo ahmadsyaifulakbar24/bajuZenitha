@@ -304,7 +304,7 @@ function HeaderBot() {
             >
               LOGIN
             </Button>
-            <Link to="/register-page">
+            <Link to="/register-page" style={{ textDecoration: 'none' }}>
               <Button
                 variant="outlined"
                 sx={{
@@ -472,24 +472,27 @@ function HeaderBot() {
           >
             Lupa Kata Sandi
           </Typography>
-          <Button
-            variant="outlined"
-            sx={{
-              backgroundColor: 'magenta',
-              color: 'white',
-              fontWeight: 'bold',
-              borderColor: 'magenta',
-              mt: 5.5,
-              ml: 5.5,
-              borderRadius: 20,
-              width: 300,
-              height: 50,
-              textTransform: 'capitalize',
-              fontSize: 20,
-            }}
-          >
-            Masuk
-          </Button>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Button
+              onClick={handleClose}
+              variant="outlined"
+              sx={{
+                backgroundColor: 'magenta',
+                color: 'white',
+                fontWeight: 'bold',
+                borderColor: 'magenta',
+                mt: 5.5,
+                ml: 5.5,
+                borderRadius: 20,
+                width: 300,
+                height: 50,
+                textTransform: 'capitalize',
+                fontSize: 20,
+              }}
+            >
+              Masuk
+            </Button>
+          </Link>
         </Box>
       </Modal>
 

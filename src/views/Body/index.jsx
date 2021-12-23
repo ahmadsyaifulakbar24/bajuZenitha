@@ -183,7 +183,7 @@ const ProdukItem = () => {
           >
             <CartIcon sx={{ color: 'purple' }} />
           </Button>
-          <Link to="/detail-produk">
+          <Link to="/detail-produk" style={{ textDecoration: 'none' }}>
             <Button
               variant="outlined"
               sx={{
@@ -263,7 +263,7 @@ function Body() {
           <div>
             <Slider {...settings}>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -282,10 +282,35 @@ function Body() {
                   }}
                 >
                   Gamis
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 150,
+                    height: 30,
+                    mt: 2,
+                    // ml: 10,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/gamis.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 2,
+                      ml: 6,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Gamis
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -304,10 +329,35 @@ function Body() {
                   }}
                 >
                   Hijab
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 100,
+                    height: 30,
+                    mt: 2,
+                    ml: 3,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/hijab.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Hijab
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -326,10 +376,35 @@ function Body() {
                   }}
                 >
                   Koko
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 100,
+                    height: 30,
+                    mt: 2,
+                    ml: 3,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/koko.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Koko
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -348,10 +423,35 @@ function Body() {
                   }}
                 >
                   Rok
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 145,
+                    height: 30,
+                    mt: 2,
+                    ml: 2,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/rok.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 8,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Rok
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -370,10 +470,35 @@ function Body() {
                   }}
                 >
                   Jaket
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 110,
+                    height: 30,
+                    mt: 2,
+                    ml: 3,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/jaket.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 2,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Jaket
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -392,11 +517,36 @@ function Body() {
                   }}
                 >
                   Mukena
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 115,
+                    height: 30,
+                    mt: 2,
+                    ml: 3,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/mukena.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Mukena
+                  </Typography>
+                </Box>
               </div>
 
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -415,10 +565,35 @@ function Body() {
                   }}
                 >
                   Manset
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 140,
+                    height: 30,
+                    mt: 2,
+                    ml: 3,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/manset.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Manset
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -437,10 +612,34 @@ function Body() {
                   }}
                 >
                   Masker
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 200,
+                    height: 30,
+                    mt: 2,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/masker.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 4,
+                      ml: 8,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Masker
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -459,10 +658,34 @@ function Body() {
                   }}
                 >
                   Bayi dan Ibu
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 220,
+                    height: 30,
+                    mt: 2,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/bayiibu.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 4,
+                      ml: 8,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Bayi & Ibu
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -481,10 +704,35 @@ function Body() {
                   }}
                 >
                   Atasan
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 100,
+                    height: 30,
+                    mt: 2,
+                    ml: 8,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/atasan.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 2,
+                      ml: 3,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Atasan
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -503,10 +751,35 @@ function Body() {
                   }}
                 >
                   Sarimbit
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 130,
+                    height: 30,
+                    mt: 2,
+                    ml: 5,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/sarimbit.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 2,
+                      ml: 3,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Sarimbit
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -525,10 +798,35 @@ function Body() {
                   }}
                 >
                   Kurta
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 70,
+                    height: 30,
+                    mt: 2,
+                    ml: 7,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/kurta.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 1,
+                      ml: 2,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Kurta
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -547,10 +845,35 @@ function Body() {
                   }}
                 >
                   Kulot
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 100,
+                    height: 30,
+                    mt: 2,
+                    ml: 5,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/kulot.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 3,
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Kulot
+                  </Typography>
+                </Box>
               </div>
               <div>
-                <CardMedia
+                {/* <CardMedia
                   component="img"
                   width="50"
                   height="150"
@@ -569,7 +892,32 @@ function Body() {
                   }}
                 >
                   Rompi Sholat
-                </Typography>
+                </Typography> */}
+                <Box
+                  sx={{
+                    width: 130,
+                    height: 30,
+                    mt: 2,
+                    ml: 4,
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image="/assets/images/kategoriimg/rompisholat.png"
+                  />
+                  <Typography
+                    sx={{
+                      fontWeight: 'bold',
+                      mt: 5,
+                      ml: 2,
+                      [theme.breakpoints.down('md')]: {
+                        fontWeight: 'bold',
+                      },
+                    }}
+                  >
+                    Rompi Sholat
+                  </Typography>
+                </Box>
               </div>
             </Slider>
           </div>

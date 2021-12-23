@@ -289,7 +289,7 @@ function RegisterPage() {
               >
                 Lupa Kata Sandi
               </Typography>
-              <Link to="/">
+              <Link to="/" style={{ textDecoration: 'none' }}>
                 <Button
                   variant="outlined"
                   sx={{
@@ -455,7 +455,7 @@ function RegisterPage() {
                   label="Password"
                 />
               </FormControl>
-              <Link to="/">
+              <Link to="/" style={{ textDecoration: 'none' }}>
                 <Button
                   variant="outlined"
                   sx={{

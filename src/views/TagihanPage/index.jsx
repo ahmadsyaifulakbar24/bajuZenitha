@@ -1147,7 +1147,7 @@ function TagihanPage() {
             </Box>
           </Box>
 
-          <Link to="/checkout-page">
+          <Link to="/checkout-page" style={{ textDecoration: 'none' }}>
             <Button
               variant="outlined"
               sx={{
