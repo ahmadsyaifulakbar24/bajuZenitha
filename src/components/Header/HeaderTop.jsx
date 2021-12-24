@@ -22,7 +22,7 @@ const Hilang = styled('div')(({ theme }) => ({
 function HeaderTop() {
   return (
     <Hilang>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, width: '100%' }}>
         <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
           <Toolbar>
             <EmailIcon sx={{ color: '#808080' }} />

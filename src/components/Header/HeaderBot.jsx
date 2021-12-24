@@ -34,6 +34,11 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import Slide from '@mui/material/Slide';
 import MenuIcon from '@mui/icons-material/Menu';
+import EmailIcon from '@mui/icons-material/Email';
+import FBIcon from '@mui/icons-material/Facebook';
+import IGIcon from '@mui/icons-material/Instagram';
+import YTIcon from '@mui/icons-material/YouTube';
+import ShippingIcon from '@mui/icons-material/LocalShipping';
 
 const Hilang = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
@@ -54,7 +59,7 @@ const Search = styled('div')(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   backgroundColor: 'gray',
   marginRight: theme.spacing(5),
-  width: 1070,
+  width: '100%', //1070
   [theme.breakpoints.down('md')]: {
     width: 700,
     marginRight: theme.spacing(2),
@@ -77,7 +82,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     padding: theme.spacing(1, 1, 1, 0),
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
-    width: 1000,
+    width: '100%', //1000
     [theme.breakpoints.down('md')]: {
       width: 630,
     },
@@ -159,76 +164,361 @@ function HeaderBot() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        sx={{
-          bgcolor: 'white',
-          [theme.breakpoints.down('md')]: {
-            width: '100%',
-            height: 100,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          },
-        }}
-      >
-        <Toolbar>
-          <Hilang>
-            <Avatar
-              variant="rounded"
-              src="/assets/images/logo 3.png"
-              sx={{ bgcolor: 'black', width: 150, height: 50, mr: 3 }}
-            />
-          </Hilang>
-          <Link to="/">
-            <IconButton
+    <>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar sx={{ bgcolor: 'white' }}>
+          <Toolbar sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box
               sx={{
-                mr: 1,
+                width: '100%',
+                // bgcolor: 'red',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
             >
-              <HomeIcon
+              <EmailIcon sx={{ color: '#808080' }} />
+              <Typography
+                variant="h8"
+                component="div"
+                sx={{ flexGrow: 1, ml: 1, color: '#808080' }}
+              >
+                sample@gmail.com
+              </Typography>
+              <Button>
+                <ShippingIcon sx={{ color: '#808080' }} />
+                <Typography sx={{ ml: 1, color: '#808080' }}>
+                  CEK ORDER
+                </Typography>
+              </Button>
+              <Button sx={{ ml: 5 }}>
+                <Typography sx={{ color: '#808080' }}>CEK STOK</Typography>
+              </Button>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+                sx={{ ml: 18 }}
+              >
+                <FBIcon sx={{ color: '#808080' }} />
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+                sx={{ ml: 1 }}
+              >
+                <IGIcon sx={{ color: '#808080' }} />
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+                sx={{ ml: 1 }}
+              >
+                <YTIcon sx={{ color: '#808080' }} />
+              </IconButton>
+            </Box>
+            <Box
+              sx={{
+                width: '100%',
+                py: 1,
+                // bgcolor: 'red',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Hilang>
+                <Avatar
+                  variant="rounded"
+                  src="/assets/images/logo 3.png"
+                  sx={{ bgcolor: 'black', width: 150, height: 50, mr: 3 }}
+                />
+              </Hilang>
+              <Link to="/">
+                <IconButton
+                  sx={{
+                    mr: 1,
+                  }}
+                >
+                  <HomeIcon
+                    sx={{
+                      color: 'pink',
+                      [theme.breakpoints.down('md')]: {
+                        color: 'pink',
+                        fontSize: 40,
+                      },
+                    }}
+                  />
+                </IconButton>
+              </Link>
+              <Hilang>
+                <Button sx={{ mr: 3 }} onClick={handleOpen2}>
+                  <Typography
+                    sx={{ fontWeight: 'bold', color: 'black', width: 130 }}
+                  >
+                    PRODUK KAMI
+                  </Typography>
+                  <ArrowDownIcon sx={{ color: 'gray' }} />
+                </Button>
+              </Hilang>
+              <Search>
+                <SearchIconWrapper>
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Cari Produk"
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </Search>
+              <Hilang>
+                <Box
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRight: 1,
+                    borderRightColor: 'lightgrey',
+                    mr: 5,
+                  }}
+                >
+                  <IconButton sx={{ mr: 5 }}>
+                    <LoveIcon sx={{ color: 'black' }} />
+                  </IconButton>
+                </Box>
+              </Hilang>
+              <Box
                 sx={{
-                  color: 'pink',
+                  width: 40,
+                  height: 40,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRight: 1,
+                  borderRightColor: 'lightgrey',
+                  mr: 4,
                   [theme.breakpoints.down('md')]: {
-                    color: 'pink',
-                    fontSize: 40,
+                    width: 40,
+                    height: 40,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    borderRight: 1,
+                    borderRightColor: 'lightgrey',
+                    mr: 2,
                   },
                 }}
-              />
-            </IconButton>
-          </Link>
+              >
+                <Link to="/cart-page">
+                  <IconButton
+                    sx={{
+                      mr: 5,
+                      [theme.breakpoints.down('md')]: {
+                        mr: 0,
+                      },
+                    }}
+                  >
+                    <CartIcon
+                      sx={{
+                        color: 'black',
+                        [theme.breakpoints.down('md')]: {
+                          fontSize: 30,
+                        },
+                      }}
+                    />
+                  </IconButton>
+                </Link>
+              </Box>
+              <Hilang sx={{ display: 'flex', flexDirection: 'row' }}>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    fontWeight: 'bold',
+                    borderColor: 'black',
+                    mr: 3,
+                  }}
+                  onClick={handleOpen}
+                >
+                  LOGIN
+                </Button>
+                <Link to="/register-page" style={{ textDecoration: 'none' }}>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: 'pink',
+                      color: 'white',
+                      fontWeight: 'bold',
+                      borderColor: 'pink',
+                      flexDirection: 'column-reverse',
+                    }}
+                  >
+                    DAFTAR
+                  </Button>
+                </Link>
+              </Hilang>
+              <Muncul>
+                <IconButton onClick={handleOpenDialog}>
+                  <MenuIcon sx={{ fontSize: 40, color: 'black' }} />
+                </IconButton>
+                <Dialog
+                  fullScreen
+                  open={open3}
+                  onClose={handleCloseDialog}
+                  TransitionComponent={Transition}
+                >
+                  <AppBar sx={{ position: 'relative', bgcolor: 'white' }}>
+                    <Toolbar>
+                      <IconButton
+                        edge="start"
+                        color="inherit"
+                        onClick={handleCloseDialog}
+                        aria-label="close"
+                      >
+                        <CloseIcon sx={{ color: 'black' }} />
+                      </IconButton>
+                    </Toolbar>
+                  </AppBar>
+                  <List>
+                    <ListItem button>
+                      <ListItemText
+                        primary="Phone ringtone"
+                        secondary="Titania"
+                      />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText
+                        primary="Default notification ringtone"
+                        secondary="Tethys"
+                      />
+                    </ListItem>
+                  </List>
 
-          {/* <Muncul>
-            <Link to="/detail-produk">
-              <IconButton sx={{ mr: 1 }}>
-                <InvenIcon sx={{ color: 'pink' }} />
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: 'white',
+                      color: 'black',
+                      fontWeight: 'bold',
+                      borderColor: 'black',
+                      mt: 5,
+                      width: '50%',
+                      alignSelf: 'center',
+                    }}
+                    onClick={handleOpen}
+                  >
+                    LOGIN
+                  </Button>
+                  <Link to="/register-page">
+                    <Button
+                      onClick={handleCloseDialog}
+                      variant="outlined"
+                      sx={{
+                        backgroundColor: 'pink',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        borderColor: 'pink',
+                        mt: 5,
+                        width: '50%',
+                        ml: 29,
+                      }}
+                    >
+                      DAFTAR
+                    </Button>
+                  </Link>
+                </Dialog>
+              </Muncul>
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </Box>
+      {/* <Box sx={{}}>
+        <AppBar
+          position="static"
+          sx={{
+            bgcolor: 'white',
+            [theme.breakpoints.down('md')]: {
+              // width: '100%',
+              height: 100,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            },
+          }}
+        >
+          <Toolbar>
+            <Hilang>
+              <Avatar
+                variant="rounded"
+                src="/assets/images/logo 3.png"
+                sx={{ bgcolor: 'black', width: 150, height: 50, mr: 3 }}
+              />
+            </Hilang>
+            <Link to="/">
+              <IconButton
+                sx={{
+                  mr: 1,
+                }}
+              >
+                <HomeIcon
+                  sx={{
+                    color: 'pink',
+                    [theme.breakpoints.down('md')]: {
+                      color: 'pink',
+                      fontSize: 40,
+                    },
+                  }}
+                />
               </IconButton>
             </Link>
-          </Muncul> */}
 
-          <Hilang>
-            <Button sx={{ mr: 3 }} onClick={handleOpen2}>
-              <Typography
-                sx={{ fontWeight: 'bold', color: 'black', width: 130 }}
+            <Hilang>
+              <Button sx={{ mr: 3 }} onClick={handleOpen2}>
+                <Typography
+                  sx={{ fontWeight: 'bold', color: 'black', width: 130 }}
+                >
+                  PRODUK KAMI
+                </Typography>
+                <ArrowDownIcon sx={{ color: 'gray' }} />
+              </Button>
+            </Hilang>
+
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Cari Produk"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
+
+            <Hilang>
+              <Box
+                sx={{
+                  width: 40,
+                  height: 40,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRight: 1,
+                  borderRightColor: 'lightgrey',
+                  mr: 5,
+                }}
               >
-                PRODUK KAMI
-              </Typography>
-              <ArrowDownIcon sx={{ color: 'gray' }} />
-            </Button>
-          </Hilang>
+                <IconButton sx={{ mr: 5 }}>
+                  <LoveIcon sx={{ color: 'black' }} />
+                </IconButton>
+              </Box>
+            </Hilang>
 
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Cari Produk"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
-
-          <Hilang>
             <Box
               sx={{
                 width: 40,
@@ -238,126 +528,41 @@ function HeaderBot() {
                 alignItems: 'center',
                 borderRight: 1,
                 borderRightColor: 'lightgrey',
-                mr: 5,
+                mr: 4,
+                [theme.breakpoints.down('md')]: {
+                  width: 40,
+                  height: 40,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRight: 1,
+                  borderRightColor: 'lightgrey',
+                  mr: 2,
+                },
               }}
             >
-              <IconButton sx={{ mr: 5 }}>
-                <LoveIcon sx={{ color: 'black' }} />
-              </IconButton>
-            </Box>
-          </Hilang>
-
-          <Box
-            sx={{
-              width: 40,
-              height: 40,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderRight: 1,
-              borderRightColor: 'lightgrey',
-              mr: 4,
-              [theme.breakpoints.down('md')]: {
-                width: 40,
-                height: 40,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                borderRight: 1,
-                borderRightColor: 'lightgrey',
-                mr: 2,
-              },
-            }}
-          >
-            <Link to="/cart-page">
-              <IconButton
-                sx={{
-                  mr: 5,
-                  [theme.breakpoints.down('md')]: {
-                    mr: 0,
-                  },
-                }}
-              >
-                <CartIcon
+              <Link to="/cart-page">
+                <IconButton
                   sx={{
-                    color: 'black',
+                    mr: 5,
                     [theme.breakpoints.down('md')]: {
-                      fontSize: 30,
+                      mr: 0,
                     },
                   }}
-                />
-              </IconButton>
-            </Link>
-          </Box>
-
-          <Hilang sx={{ display: 'flex', flexDirection: 'row' }}>
-            <Button
-              variant="outlined"
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                fontWeight: 'bold',
-                borderColor: 'black',
-                mr: 3,
-              }}
-              onClick={handleOpen}
-            >
-              LOGIN
-            </Button>
-            <Link to="/register-page" style={{ textDecoration: 'none' }}>
-              <Button
-                variant="outlined"
-                sx={{
-                  backgroundColor: 'pink',
-                  color: 'white',
-                  fontWeight: 'bold',
-                  borderColor: 'pink',
-                  flexDirection: 'column-reverse',
-                }}
-              >
-                DAFTAR
-              </Button>
-            </Link>
-          </Hilang>
-
-          <Muncul>
-            <IconButton onClick={handleOpenDialog}>
-              <MenuIcon sx={{ fontSize: 40, color: 'black' }} />
-            </IconButton>
-            {/* <Button variant="outlined" onClick={handleOpenDialog}>
-              Open full-screen dialog
-            </Button> */}
-            <Dialog
-              fullScreen
-              open={open3}
-              onClose={handleCloseDialog}
-              TransitionComponent={Transition}
-            >
-              <AppBar sx={{ position: 'relative', bgcolor: 'white' }}>
-                <Toolbar>
-                  <IconButton
-                    edge="start"
-                    color="inherit"
-                    onClick={handleCloseDialog}
-                    aria-label="close"
-                  >
-                    <CloseIcon sx={{ color: 'black' }} />
-                  </IconButton>
-                </Toolbar>
-              </AppBar>
-              <List>
-                <ListItem button>
-                  <ListItemText primary="Phone ringtone" secondary="Titania" />
-                </ListItem>
-                <Divider />
-                <ListItem button>
-                  <ListItemText
-                    primary="Default notification ringtone"
-                    secondary="Tethys"
+                >
+                  <CartIcon
+                    sx={{
+                      color: 'black',
+                      [theme.breakpoints.down('md')]: {
+                        fontSize: 30,
+                      },
+                    }}
                   />
-                </ListItem>
-              </List>
+                </IconButton>
+              </Link>
+            </Box>
 
+            <Hilang sx={{ display: 'flex', flexDirection: 'row' }}>
               <Button
                 variant="outlined"
                 sx={{
@@ -365,35 +570,103 @@ function HeaderBot() {
                   color: 'black',
                   fontWeight: 'bold',
                   borderColor: 'black',
-                  mt: 5,
-                  width: '50%',
-                  alignSelf: 'center',
+                  mr: 3,
                 }}
                 onClick={handleOpen}
               >
                 LOGIN
               </Button>
-              <Link to="/register-page">
+              <Link to="/register-page" style={{ textDecoration: 'none' }}>
                 <Button
-                  onClick={handleCloseDialog}
                   variant="outlined"
                   sx={{
                     backgroundColor: 'pink',
                     color: 'white',
                     fontWeight: 'bold',
                     borderColor: 'pink',
-                    mt: 5,
-                    width: '50%',
-                    ml: 29,
+                    flexDirection: 'column-reverse',
                   }}
                 >
                   DAFTAR
                 </Button>
               </Link>
-            </Dialog>
-          </Muncul>
-        </Toolbar>
-      </AppBar>
+            </Hilang>
+
+            <Muncul>
+              <IconButton onClick={handleOpenDialog}>
+                <MenuIcon sx={{ fontSize: 40, color: 'black' }} />
+              </IconButton>
+              <Dialog
+                fullScreen
+                open={open3}
+                onClose={handleCloseDialog}
+                TransitionComponent={Transition}
+              >
+                <AppBar sx={{ position: 'relative', bgcolor: 'white' }}>
+                  <Toolbar>
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      onClick={handleCloseDialog}
+                      aria-label="close"
+                    >
+                      <CloseIcon sx={{ color: 'black' }} />
+                    </IconButton>
+                  </Toolbar>
+                </AppBar>
+                <List>
+                  <ListItem button>
+                    <ListItemText
+                      primary="Phone ringtone"
+                      secondary="Titania"
+                    />
+                  </ListItem>
+                  <Divider />
+                  <ListItem button>
+                    <ListItemText
+                      primary="Default notification ringtone"
+                      secondary="Tethys"
+                    />
+                  </ListItem>
+                </List>
+
+                <Button
+                  variant="outlined"
+                  sx={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    fontWeight: 'bold',
+                    borderColor: 'black',
+                    mt: 5,
+                    width: '50%',
+                    alignSelf: 'center',
+                  }}
+                  onClick={handleOpen}
+                >
+                  LOGIN
+                </Button>
+                <Link to="/register-page">
+                  <Button
+                    onClick={handleCloseDialog}
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: 'pink',
+                      color: 'white',
+                      fontWeight: 'bold',
+                      borderColor: 'pink',
+                      mt: 5,
+                      width: '50%',
+                      ml: 29,
+                    }}
+                  >
+                    DAFTAR
+                  </Button>
+                </Link>
+              </Dialog>
+            </Muncul>
+          </Toolbar>
+        </AppBar>
+      </Box> */}
 
       <Modal
         open={open}
@@ -890,7 +1163,7 @@ function HeaderBot() {
           </Box>
         </Box>
       </Modal>
-    </Box>
+    </>
   );
 }
 

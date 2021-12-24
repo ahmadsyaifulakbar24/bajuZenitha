@@ -15,7 +15,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import MinIcon from '@mui/icons-material/Remove';
 import PlusIcon from '@mui/icons-material/Add';
 import { useTheme } from '@mui/material/styles';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -24,19 +24,19 @@ import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import TextField from '@mui/material/TextField';
 
-const Hilang = styled('div')(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {
-    display: 'none',
-  },
-  [theme.breakpoints.up('lg')]: {},
-}));
+// const Hilang = styled('div')(({ theme }) => ({
+//   [theme.breakpoints.down('md')]: {
+//     display: 'none',
+//   },
+//   [theme.breakpoints.up('lg')]: {},
+// }));
 
-const Muncul = styled('div')(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {},
-  [theme.breakpoints.up('lg')]: {
-    display: 'none',
-  },
-}));
+// const Muncul = styled('div')(({ theme }) => ({
+//   [theme.breakpoints.down('md')]: {},
+//   [theme.breakpoints.up('lg')]: {
+//     display: 'none',
+//   },
+// }));
 
 const ProdukItem = () => {
   const theme = useTheme();
@@ -325,6 +325,7 @@ function CartPage() {
               display: 'flex',
               flexDirection: 'row',
               mt: 5,
+              // bgcolor: 'green',
               [theme.breakpoints.down('md')]: {
                 height: 500,
                 display: 'flex',
@@ -333,486 +334,380 @@ function CartPage() {
               },
             }}
           >
-            <Box
-              sx={{
-                width: '60%',
-                [theme.breakpoints.down('md')]: {
-                  width: '95%',
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  height: 50,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  borderBottom: 2,
-                  borderBottomColor: 'gray',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  ml: 4,
-                  [theme.breakpoints.down('md')]: {
-                    height: 60,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    borderBottom: 2,
-                    borderBottomColor: 'gray',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    ml: 4,
-                  },
-                }}
-              >
-                <FormGroup
-                  sx={{
-                    [theme.breakpoints.down('md')]: {
-                      transform: 'scale(1.5)',
-                      ml: 4,
-                    },
-                  }}
-                >
-                  <FormControlLabel
-                    control={<Checkbox defaultChecked color="secondary" />}
-                    label="Pilih Semua"
-                  />
-                </FormGroup>
-                <Typography
-                  sx={{ fontWeight: 'bold', fontSize: 20, color: 'magenta' }}
-                >
-                  Hapus
-                </Typography>
-              </Box>
-              <Box
-                sx={{
-                  height: 100,
-                  ml: 4,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  [theme.breakpoints.down('md')]: {
-                    height: 150,
-                    ml: 4,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                  },
-                }}
-              >
-                <Checkbox
-                  defaultChecked
-                  color="secondary"
-                  sx={{
-                    ml: -1,
-                    [theme.breakpoints.down('md')]: {
-                      transform: 'scale(1.5)',
-                    },
-                  }}
-                />
+            <Grid container spacing={1}>
+              <Grid item xs={12} md={8}>
                 <Box
-                  sx={{
-                    width: 70,
-                    height: 70,
-                    borderRadius: 1,
-                    bgcolor: 'white',
-                    border: 1,
-                    borderColor: 'purple',
-                    mr: 3,
-                    ml: 2,
-                    [theme.breakpoints.down('md')]: {
-                      width: 120,
-                      height: 120,
-                      borderRadius: 1,
-                      bgcolor: 'white',
-                      border: 1,
-                      borderColor: 'purple',
-                      mr: 3,
-                      ml: 2,
-                      mt: 2,
-                    },
-                  }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="/assets/images/image 8.png"
-                    sx={{ height: '100%', borderRadius: 1 }}
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    width: 300,
-                    height: 100,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontWeight: 'bold',
-                      color: 'gray',
-                      [theme.breakpoints.down('md')]: {
-                        fontWeight: 'bold',
-                        color: 'gray',
-                        fontSize: 25,
-                      },
-                    }}
-                  >
-                    UMMI 11 - Gamis Zenitha
-                  </Typography>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      [theme.breakpoints.down('md')]: {
-                        display: 'flex',
-                        flexDirection: 'row',
-                        width: 500,
-                      },
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        mr: 3,
-                        color: 'magenta',
-                        [theme.breakpoints.down('md')]: {
-                          mr: 3,
-                          color: 'magenta',
-                          fontSize: 25,
-                        },
-                      }}
-                    >
-                      Warna: Abu - Abu
-                    </Typography>
-                    <Typography
-                      sx={{
-                        color: 'magenta',
-                        [theme.breakpoints.down('md')]: {
-                          color: 'magenta',
-                          fontSize: 25,
-                        },
-                      }}
-                    >
-                      Ukuran: L
-                    </Typography>
-                  </Box>
-                  <Typography
-                    sx={{
-                      fontWeight: 'bold',
-                      [theme.breakpoints.down('md')]: {
-                        fontWeight: 'bold',
-                        fontSize: 25,
-                      },
-                    }}
-                  >
-                    Rp 112.980
-                  </Typography>
-                </Box>
-              </Box>
-
-              <Box
-                sx={{
-                  height: 30,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  ml: 4,
-                  [theme.breakpoints.down('md')]: {
-                    height: 60,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    ml: 4,
-                  },
-                }}
-              >
-                <Typography
-                  sx={{
-                    mr: 2,
-                    width: 150,
-                    [theme.breakpoints.down('md')]: {
-                      mr: 2,
-                      width: 200,
-                      fontSize: 20,
-                    },
-                  }}
-                >
-                  Pindah ke Wishlist
-                </Typography>
-                <Checkbox
-                  {...label}
-                  icon={
-                    <FavIconFill
-                      sx={{
-                        [theme.breakpoints.down('md')]: {
-                          fontSize: 30,
-                        },
-                      }}
-                    />
-                  }
-                  checkedIcon={
-                    <FavIconFill
-                      sx={{
-                        color: 'red',
-                        [theme.breakpoints.down('md')]: {
-                          fontSize: 30,
-                          color: 'red',
-                        },
-                      }}
-                    />
-                  }
-                />
-                <Box
-                  sx={{
-                    height: 1,
-                    border: 1,
-                    borderColor: 'gray',
-                    mx: 2,
-                    [theme.breakpoints.down('md')]: {
-                      height: '50%',
-                      border: 1,
-                      borderColor: 'gray',
-                      mx: 2,
-                    },
-                  }}
-                />
-                <IconButton>
-                  <DeleteIcon
-                    sx={{
-                      [theme.breakpoints.down('md')]: {
-                        fontSize: 30,
-                        mr: 10,
-                      },
-                    }}
-                  />
-                </IconButton>
-                <Box
-                  sx={{
-                    width: 150,
-                    height: 30,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    ml: 30,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: '31%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      border: 1,
-                      borderColor: 'purple',
-                    }}
-                  >
-                    <IconButton>
-                      <MinIcon sx={{ color: 'purple' }} />
-                    </IconButton>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: '34%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      boxShadow: 3,
-                      mx: 1,
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      1
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      width: '31%',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      border: 1,
-                      borderColor: 'purple',
-                    }}
-                  >
-                    <IconButton>
-                      <PlusIcon sx={{ color: 'purple' }} />
-                    </IconButton>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-
-            <Muncul>
-              <Box sx={{ width: '95%', ml: 2, mt: 5 }}>
-                <Typography
-                  sx={{
-                    fontWeight: 'bold',
-                    fontSize: 20,
-                    [theme.breakpoints.down('md')]: {
-                      fontWeight: 'bold',
-                      fontSize: 30,
-                    },
-                  }}
-                >
-                  Total Belanja
-                </Typography>
-                <Box
-                  sx={{
-                    height: 50,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    borderBottom: 1,
-                    borderBottomStyle: 'dashed',
-                    borderBottomColor: 'gray',
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      color: 'gray',
-                      [theme.breakpoints.down('md')]: {
-                        color: 'gray',
-                        fontSize: 20,
-                      },
-                    }}
-                  >
-                    Total Harga (1 Produk)
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: 'gray',
-                      [theme.breakpoints.down('md')]: {
-                        color: 'gray',
-                        fontSize: 20,
-                      },
-                    }}
-                  >
-                    Rp 112.980
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    height: 50,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontWeight: 'bold',
-                      [theme.breakpoints.down('md')]: {
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                      },
-                    }}
-                  >
-                    Total Harga
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontWeight: 'bold',
-                      [theme.breakpoints.down('md')]: {
-                        fontWeight: 'bold',
-                        fontSize: 20,
-                      },
-                    }}
-                  >
-                    Rp 112.980
-                  </Typography>
-                </Box>
-
-                <Button
-                  onClick={handleOpen}
                   sx={{
                     width: '100%',
-                    border: 1,
-                    borderColor: 'magenta',
-                    bgcolor: 'magenta',
-                    mt: 3,
+                    height: '57%',
+                    // bgcolor: 'red',
                     [theme.breakpoints.down('md')]: {
-                      width: '80%',
+                      width: '95%',
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      height: 50,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      borderBottom: 2,
+                      borderBottomColor: 'gray',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      ml: 4,
+                      [theme.breakpoints.down('md')]: {
+                        height: 60,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        borderBottom: 2,
+                        borderBottomColor: 'gray',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        ml: 4,
+                      },
+                    }}
+                  >
+                    <FormGroup
+                      sx={{
+                        [theme.breakpoints.down('md')]: {
+                          transform: 'scale(1.5)',
+                          ml: 4,
+                        },
+                      }}
+                    >
+                      <FormControlLabel
+                        control={<Checkbox defaultChecked color="secondary" />}
+                        label="Pilih Semua"
+                      />
+                    </FormGroup>
+                    <Typography
+                      sx={{
+                        fontWeight: 'bold',
+                        fontSize: 20,
+                        color: 'magenta',
+                      }}
+                    >
+                      Hapus
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      height: 100,
+                      ml: 4,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      [theme.breakpoints.down('md')]: {
+                        height: 150,
+                        ml: 4,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                      },
+                    }}
+                  >
+                    <Checkbox
+                      defaultChecked
+                      color="secondary"
+                      sx={{
+                        ml: -1,
+                        [theme.breakpoints.down('md')]: {
+                          transform: 'scale(1.5)',
+                        },
+                      }}
+                    />
+                    <Box
+                      sx={{
+                        width: 70,
+                        height: 70,
+                        borderRadius: 1,
+                        bgcolor: 'white',
+                        border: 1,
+                        borderColor: 'purple',
+                        mr: 3,
+                        ml: 2,
+                        [theme.breakpoints.down('md')]: {
+                          width: 120,
+                          height: 120,
+                          borderRadius: 1,
+                          bgcolor: 'white',
+                          border: 1,
+                          borderColor: 'purple',
+                          mr: 3,
+                          ml: 2,
+                          mt: 2,
+                        },
+                      }}
+                    >
+                      <CardMedia
+                        component="img"
+                        image="/assets/images/image 8.png"
+                        sx={{ height: '100%', borderRadius: 1 }}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        width: 300,
+                        height: 100,
+                        display: 'flex',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontWeight: 'bold',
+                          color: 'gray',
+                          [theme.breakpoints.down('md')]: {
+                            fontWeight: 'bold',
+                            color: 'gray',
+                            fontSize: 25,
+                          },
+                        }}
+                      >
+                        UMMI 11 - Gamis Zenitha
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'row',
+                          [theme.breakpoints.down('md')]: {
+                            display: 'flex',
+                            flexDirection: 'row',
+                            width: 500,
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            mr: 3,
+                            color: 'magenta',
+                            [theme.breakpoints.down('md')]: {
+                              mr: 3,
+                              color: 'magenta',
+                              fontSize: 25,
+                            },
+                          }}
+                        >
+                          Warna: Abu - Abu
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: 'magenta',
+                            [theme.breakpoints.down('md')]: {
+                              color: 'magenta',
+                              fontSize: 25,
+                            },
+                          }}
+                        >
+                          Ukuran: L
+                        </Typography>
+                      </Box>
+                      <Typography
+                        sx={{
+                          fontWeight: 'bold',
+                          [theme.breakpoints.down('md')]: {
+                            fontWeight: 'bold',
+                            fontSize: 25,
+                          },
+                        }}
+                      >
+                        Rp 112.980
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  <Box
+                    sx={{
                       height: 80,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      // bgcolor: 'green',
+                      [theme.breakpoints.down('md')]: {
+                        height: 60,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        ml: 4,
+                      },
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        mr: 2,
+                        width: 150,
+                        [theme.breakpoints.down('md')]: {
+                          mr: 2,
+                          width: 200,
+                          fontSize: 20,
+                        },
+                      }}
+                    >
+                      Pindah ke Wishlist
+                    </Typography>
+                    <Checkbox
+                      {...label}
+                      icon={
+                        <FavIconFill
+                          sx={{
+                            [theme.breakpoints.down('md')]: {
+                              fontSize: 30,
+                            },
+                          }}
+                        />
+                      }
+                      checkedIcon={
+                        <FavIconFill
+                          sx={{
+                            color: 'red',
+                            [theme.breakpoints.down('md')]: {
+                              fontSize: 30,
+                              color: 'red',
+                            },
+                          }}
+                        />
+                      }
+                    />
+                    <Box
+                      sx={{
+                        // height: 1,
+                        border: 1,
+                        borderColor: 'gray',
+                        height: '50%',
+                        mx: 2,
+                        [theme.breakpoints.down('md')]: {
+                          height: '50%',
+                          border: 1,
+                          borderColor: 'gray',
+                          mx: 2,
+                        },
+                      }}
+                    />
+                    <IconButton>
+                      <DeleteIcon
+                        sx={{
+                          [theme.breakpoints.down('md')]: {
+                            fontSize: 30,
+                            mr: 10,
+                          },
+                        }}
+                      />
+                    </IconButton>
+                    <Box
+                      sx={{
+                        width: 150,
+                        height: 30,
+                        display: 'flex',
+                        flexDirection: 'row',
+                        ml: 30,
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          width: '31%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          border: 1,
+                          borderColor: 'purple',
+                        }}
+                      >
+                        <IconButton>
+                          <MinIcon sx={{ color: 'purple' }} />
+                        </IconButton>
+                      </Box>
+                      <Box
+                        sx={{
+                          width: '34%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          boxShadow: 3,
+                          mx: 1,
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            fontWeight: 'bold',
+                          }}
+                        >
+                          1
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{
+                          width: '31%',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          border: 1,
+                          borderColor: 'purple',
+                        }}
+                      >
+                        <IconButton>
+                          <PlusIcon sx={{ color: 'purple' }} />
+                        </IconButton>
+                      </Box>
+                    </Box>
+                  </Box>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={4}>
+                <Box sx={{ width: '100%' }}>
+                  <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>
+                    Total Belanja
+                  </Typography>
+                  <Box
+                    sx={{
+                      height: 50,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      borderBottom: 1,
+                      borderBottomStyle: 'dashed',
+                      borderBottomColor: 'gray',
+                    }}
+                  >
+                    <Typography sx={{ color: 'gray' }}>
+                      Total Harga (1 Produk)
+                    </Typography>
+                    <Typography sx={{ color: 'gray' }}>Rp 112.980</Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      height: 50,
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <Typography sx={{ fontWeight: 'bold' }}>
+                      Total Harga
+                    </Typography>
+                    <Typography sx={{ fontWeight: 'bold' }}>
+                      Rp 112.980
+                    </Typography>
+                  </Box>
+                  <Button
+                    onClick={handleOpen}
+                    sx={{
+                      width: '100%',
                       border: 1,
                       borderColor: 'magenta',
                       bgcolor: 'magenta',
-                      mt: 5,
-                      ml: 11,
-                    },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      color: 'white',
-                      [theme.breakpoints.down('md')]: {
-                        color: 'white',
-                        fontSize: 25,
-                        fontWeight: 'bold',
-                      },
+                      mt: 3,
                     }}
                   >
-                    Beli (1)
-                  </Typography>
-                </Button>
-              </Box>
-            </Muncul>
-
-            <Hilang>
-              <Box sx={{ width: '100%', ml: 5 }}>
-                <Typography sx={{ fontWeight: 'bold', fontSize: 20 }}>
-                  Total Belanja
-                </Typography>
-                <Box
-                  sx={{
-                    height: 50,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    borderBottom: 1,
-                    borderBottomStyle: 'dashed',
-                    borderBottomColor: 'gray',
-                  }}
-                >
-                  <Typography sx={{ color: 'gray' }}>
-                    Total Harga (1 Produk)
-                  </Typography>
-                  <Typography sx={{ color: 'gray' }}>Rp 112.980</Typography>
+                    <Typography sx={{ color: 'white' }}>Beli (1)</Typography>
+                  </Button>
                 </Box>
-                <Box
-                  sx={{
-                    height: 50,
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Total Harga
-                  </Typography>
-                  <Typography sx={{ fontWeight: 'bold' }}>
-                    Rp 112.980
-                  </Typography>
-                </Box>
-                <Button
-                  onClick={handleOpen}
-                  sx={{
-                    width: '100%',
-                    border: 1,
-                    borderColor: 'magenta',
-                    bgcolor: 'magenta',
-                    mt: 3,
-                  }}
-                >
-                  <Typography sx={{ color: 'white' }}>Beli (1)</Typography>
-                </Button>
-              </Box>
-            </Hilang>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Container>
