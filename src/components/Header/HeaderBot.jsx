@@ -168,58 +168,65 @@ function HeaderBot() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar sx={{ bgcolor: 'white' }}>
           <Toolbar sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Box
+            <Hilang
               sx={{
                 width: '100%',
                 // bgcolor: 'red',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
               }}
             >
-              <EmailIcon sx={{ color: '#808080' }} />
-              <Typography
-                variant="h8"
-                component="div"
-                sx={{ flexGrow: 1, ml: 1, color: '#808080' }}
+              <Box
+                sx={{
+                  // bgcolor: 'red',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
               >
-                sample@gmail.com
-              </Typography>
-              <Button>
-                <ShippingIcon sx={{ color: '#808080' }} />
-                <Typography sx={{ ml: 1, color: '#808080' }}>
-                  CEK ORDER
+                <EmailIcon sx={{ color: '#808080' }} />
+                <Typography
+                  variant="h8"
+                  component="div"
+                  sx={{ flexGrow: 1, ml: 1, color: '#808080' }}
+                >
+                  sample@gmail.com
                 </Typography>
-              </Button>
-              <Button sx={{ ml: 5 }}>
-                <Typography sx={{ color: '#808080' }}>CEK STOK</Typography>
-              </Button>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-                sx={{ ml: 18 }}
-              >
-                <FBIcon sx={{ color: '#808080' }} />
-              </IconButton>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-                sx={{ ml: 1 }}
-              >
-                <IGIcon sx={{ color: '#808080' }} />
-              </IconButton>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-                sx={{ ml: 1 }}
-              >
-                <YTIcon sx={{ color: '#808080' }} />
-              </IconButton>
-            </Box>
+                <Button>
+                  <ShippingIcon sx={{ color: '#808080' }} />
+                  <Typography sx={{ ml: 1, color: '#808080' }}>
+                    CEK ORDER
+                  </Typography>
+                </Button>
+                <Button sx={{ ml: 5 }}>
+                  <Typography sx={{ color: '#808080' }}>CEK STOK</Typography>
+                </Button>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                  sx={{ ml: 18 }}
+                >
+                  <FBIcon sx={{ color: '#808080' }} />
+                </IconButton>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                  sx={{ ml: 1 }}
+                >
+                  <IGIcon sx={{ color: '#808080' }} />
+                </IconButton>
+                <IconButton
+                  size="large"
+                  aria-label="show 4 new mails"
+                  color="inherit"
+                  sx={{ ml: 1 }}
+                >
+                  <YTIcon sx={{ color: '#808080' }} />
+                </IconButton>
+              </Box>
+            </Hilang>
+
             <Box
               sx={{
                 width: '100%',
